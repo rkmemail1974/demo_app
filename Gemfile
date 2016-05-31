@@ -8,7 +8,6 @@ group :development do
 gem 'sqlite3'
 end
 
-gem ruby '2.2.4'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
