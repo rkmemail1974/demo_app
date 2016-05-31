@@ -2,9 +2,9 @@ class MicropostsController < ApplicationController
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
 
 def create
-	@micropost = Micropost.new(micropost_params)
-		if @micropost.save
-			redirect_to @micropost, notice: 'user was successfully created.'
+	@microposts = Micropost.new(micropost_params)
+		if @microposts.save
+			redirect_to @microposts, notice: 'user was successfully created.'
 		else
 			render action: 'new'
 		end
@@ -12,7 +12,7 @@ end
 
 private
 def micropost_params
-	params.require(:micropost).permit(:content, :user_id)
+	params.require(:microposts).permit(:content, :user_id)
 end
 
   # GET /microposts

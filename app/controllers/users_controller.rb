@@ -2,9 +2,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
 def create
-	@user = User.new(user_params)
-		if @user.save
-			redirect_to @user, notice: 'User was successfully created.'
+	@users = User.new(user_params)
+		if @users.save
+			redirect_to @users, notice: 'User was successfully created.'
 		else
 			render action: 'new'
 		end
@@ -12,7 +12,7 @@ def create
 
 private
 def user_params
-	params.require(:user).permit(:email, :name)
+	params.require(:users).permit(:email, :name)
 end
 
   # GET /users
