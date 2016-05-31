@@ -1,20 +1,6 @@
 class MicropostsController < ApplicationController
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
 
-def create
-	@microposts = Micropost.new(micropost_params)
-		if @microposts.save
-			redirect_to @microposts, notice: 'user was successfully created.'
-		else
-			render action: 'new'
-		end
-end
-
-private
-def micropost_params
-	params.require(:microposts).permit(:content, :user_id)
-end
-
   # GET /microposts
   # GET /microposts.json
   def index
