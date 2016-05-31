@@ -8,6 +8,8 @@ group :development do
 gem 'sqlite3'
 end
 
+gem ruby '2.2.4'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,6 +45,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
+
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
